@@ -1,0 +1,12 @@
+[
+  {
+    "numero": 1,
+    "nombre": "Bulbasaur",
+    "obtenido": 0
+  },
+  {
+    "numero": 2,
+    "nombre": "Ivysaur",
+    "obtenido": 1
+  }
+]
