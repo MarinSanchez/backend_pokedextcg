@@ -30,7 +30,7 @@ app.put('/pokemon/:nombre/estado', (req, res) => {
     function (err) {
       if (err) return res.status(500).json({ error: err.message });
       if (this.changes === 0) return res.status(404).json({ message: 'Pokémon no encontrado' });
-      res.json({ message: 'Estado actualizado correctamente' });
+      res.json({ message: 'Estado actualizado' });
     }
   );
 });
