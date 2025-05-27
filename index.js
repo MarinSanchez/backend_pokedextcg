@@ -94,7 +94,7 @@ app.post('/pokemon', async (req, res) => {
 
 // 🔍 Obtener todos los Pokémon no obtenidos
 
-app.get('/no-obtenidos', async (req, res) => {
+app.get('/faltantes', async (req, res) => {
   try {
     const noObtenidos = await Pokemon.find({ obtenido: 0 });
     res.json(noObtenidos);
