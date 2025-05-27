@@ -92,6 +92,17 @@ app.post('/pokemon', async (req, res) => {
   }
 });
 
+// 🔍 Obtener todos los Pokémon no obtenidos
+
+app.get('/pokemon/no-obtenidos', async (req, res) => {
+  try {
+    const noObtenidos = await Pokemon.find({ obtenido: 0 });
+    res.json(noObtenidos);
+  } catch (err) {
+    res.status(500).json({ message: 'Error al obtener los Pokémon no obtenidos' });
+  }
+});
+
 // ✅ Iniciar el servidor
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
